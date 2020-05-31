@@ -1,0 +1,129 @@
+
+/* General */
+body {
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Login page */
+.login-button {
+  margin-bottom: 1%;
+}
+
+/* Containers */
+.login-container {
+  margin: 80px auto;
+  height: 550px;
+  width: 400px;
+}
+
+/* Registration page */
+
+.registration-container {
+  padding: 4% 19% 4% 8%;
+  margin: 8% auto 5%
+}
+
+.registration-icon {
+  position: relative;
+  top: 20%;
+  margin-bottom: 80px;
+}
+
+.consent-tick {
+  text-align: left;
+}
+
+.registration-buttons {
+  margin-top: 3%;
+}
+
+/* createProfile page */
+.profile-container {
+  padding: 7% 10%;
+}
+
+.list-group .active {
+  background-color: #5cb85c;
+  border-color: #5cb85c;
+}
+
+/* New plant page */
+.newplant-container {
+  padding: 7% 10%;
+  margin-top: 5%;
+}
+
+.seed-icon {
+  width: 300px;
+}
+
+/* Index page */
+/* Navbar */
+.navbar {
+  padding-left: 2%;
+  padding-right: 2%;
+}
+
+.navbar-brand {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.nav-item {
+  padding: 0 10px;
+}
+
+.nav-link {
+  font-size: 1.2rem;
+  font-weight: lighter;
+}
+
+.index-container {
+  padding: 0;
+}
+
+/* The plantBuddy panels (request+friends) */
+.plantBuddyPanels {
+  width: 80%;
+  margin: 5% auto;
+}
+
+ /* Buddy profile page */
+ .buddy-profile {
+   width: 70%;
+   margin: 5% auto;
+   text-align: left;
+ }
+
+ .buddy-bio {
+   margin-top: 5%;
+ }
+
+.buddy-plants {
+  width: 70%;
+  margin: 5% auto;
+}
+
+.profile-picture {
+  width: 200px;
+  height: 200px;
+  object-fit:cover;
+  border-radius: 50%;
+}
+
+/* Plant page */
+.plant-profile {
+  width: 70%;
+  margin: 10% auto;
+}
+
+/* Discussion(postDisplay) page */
+.discussion-box {
+  width: 70%;
+  margin: 5% auto;
+}
+
+.comment {
+  text-align: left;
+}
