@@ -1,0 +1,113 @@
+{% load static %}
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset='utf-8'>
+  <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+  <title>PlantBuddy Registration</title>
+  <meta name='viewport' content='width=device-width, initial-scale=1'>
+
+  <!-- Bootstrap css -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+  <!-- Bootstrap javascript -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+
+  <!-- Custom css -->
+  <link rel="stylesheet" type="text/css" href="{% static 'css/styles.css' %}">
+  <link rel="icon" href="favicon.ico">
+  <!-- Custom icons -->
+  <script src="https://kit.fontawesome.com/11fafd664d.js" crossorigin="anonymous"></script>
+  <!-- Google fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+  <div class="container-fluid registration-container">
+
+    <form action="{% url 'register' %}" method="post">
+      {% csrf_token %}
+
+
+      <div class="row">
+        <!-- Icon -->
+        <div class="col-lg-6">
+          <img class="registration-icon" src="https://d1nhio0ox7pgb.cloudfront.net/_img/o_collection_png/green_dark_grey/256x256/plain/plant.png" alt="plant-icon">
+        </div>
+        <!-- The rest of the form -->
+        <div class="col-lg-6">
+          <h1>Registration</h1>
+          <br>
+
+          <div class="form-group">
+            <input type="text" name="username" class="form-control input-lg" placeholder="Username">
+          </div>
+
+          <div class="form-group">
+            <input type="email" name="email" class="form-control input-lg" placeholder="Email Address">
+          </div>
+
+          <div class="row">
+            <div class="col-md-6">
+              <div class="form-group">
+                <input type="password" name="password" class="form-control input-lg" placeholder="Password">
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="form-group">
+                <input type="password" name="password_confirmation" class="form-control input-lg" placeholder="Confirm Password">
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-xs-4 col-sm-3 col-md-3">
+              <span class="button-checkbox">
+                <button type="button" class="btn" data-color="info">I Agree</button>
+                <input type="checkbox" name="t_and_c" id="t_and_c" class="hidden" value="1">
+              </span>
+            </div>
+            <div class="col-xs-8 col-sm-9 col-md-9 consent-tick">
+              By clicking <strong class="label label-primary">Register</strong>, you agree to the <a href="#" data-toggle="modal" data-target="#t_and_c_m">Terms and Conditions</a> set out by this site, including our Cookie Use.
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-md-6"><input type="submit" value="Register" class="btn btn-success btn-block registration-buttons"></div>
+            <div class="col-md-6"><a href="login.html" class="btn btn-dark btn-block registration-buttons">Log In</a></div>
+          </div>
+
+        </div>
+      </div>
+
+    </form>
+
+  </div>
+
+  <div class="modal fade" id="t_and_c_m" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title" id="myModalLabel">Terms & Conditions</h4>
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+        </div>
+        <div class="modal-body">
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique, itaque, modi, aliquam nostrum at sapiente consequuntur natus odio reiciendis perferendis rem nisi tempore possimus ipsa porro delectus quidem dolorem ad.</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-dark" data-dismiss="modal">I Agree</button>
+        </div>
+      </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+  </div><!-- /.modal -->
+
+</body>
+
+</html>

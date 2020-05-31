@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Accepted {{friend.username}}'s Request</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+</head>
+<body>
+    <div style="background-color:lightgreen" class="boxed">
+  	  <centre> 
+		<a style="color:brown" href="{% url 'index'%}"><b>Home</b></a>
+	  </centre>
+    </div>
+    <hr/>
+    <h1> 
+	<centre> 
+ 		You have accepted <i>{{friend.username}}'s</i> Request 
+	</centre> 
+    </h1>
+    <a allign="right" href="{% url 'profile' friend.id%}"> <h3> View their profile here:</h3>
+
+    </a>
+</body>
+</html>
